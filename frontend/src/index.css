@@ -335,6 +335,19 @@ code, pre, .font-mono {
   cursor: pointer;
   transition: all 0.15s ease;
   border: 1px solid transparent;
+  box-sizing: border-box;
+}
+
+.btn svg {
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
 }
 
 .btn-primary {
