@@ -479,3 +479,27 @@ code, pre, .font-mono {
 }
 
 /* hello i am adarsh */
+/* Icon Size Constraints */
+svg {
+  flex-shrink: 0;
+}
+svg.w-3\.5 {
+  width: 0.875rem !important;
+  height: 0.875rem !important;
+}
+svg.w-4 {
+  width: 1rem !important;
+  height: 1rem !important;
+}
+svg.w-5 {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+}
+svg.w-10 {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+}
+.btn svg {
+  display: inline-block;
+  vertical-align: middle;
+}
