@@ -12,7 +12,18 @@ A research prototype exploring explainable, physics-grounded threat detection me
 
 ---
 
-## 2. Project Architecture
+## 2. Research Team & Workstream Division
+
+| Workstream | Focus Area | Owner | Responsibilities |
+| :--- | :--- | :--- | :--- |
+| **Part 1** | **Django Backend, Detection & Integration** | **Rudra** *(Lead)* | REST APIs, statistical threshold engine ($\tau$), nonce replay database, code review & PR merging. |
+| **Part 2** | **Quantum Simulation & Attack Modeling** | **Sanatan** | Pure Python/NumPy simulation of Pauli eigenstates, Bell states, channel noise ($\eta$), and intercept-resend attacks. |
+| **Part 3** | **Frontend & Evidence Visualization** | **Adarsh** | React + Vite UI polish, technical explanation tooltips, parameter sliders, and mobile responsiveness. |
+| **Part 4** | **Independent Evaluation & Benchmarking** | **Sambit** | Automated benchmark test scripts, repeated trial evaluations, CSV export, and evaluation reporting. |
+
+---
+
+## 3. Project Architecture
 
 ```
 quantum-threat-detection/
@@ -40,7 +51,7 @@ quantum-threat-detection/
 
 ---
 
-## 3. Quickstart: Running the Frontend Locally
+## 4. Quickstart: Running the Frontend Locally
 
 ### Prerequisites
 - Node.js (v18+) and npm
@@ -50,7 +61,7 @@ quantum-threat-detection/
 # 1. Navigate to the frontend directory
 cd frontend
 
-# 2. Install dependencies (if not already installed)
+# 2. Install dependencies
 npm install
 
 # 3. Start Vite development server
@@ -61,20 +72,9 @@ Open your browser to [http://localhost:5173](http://localhost:5173).
 
 ---
 
-## 4. Workstream Division
-
-| Part | Focus | Lead / Ownership | Key Deliverables |
-| :--- | :--- | :--- | :--- |
-| **Part 1** | Django, Detection & Integration | Rudra | REST APIs, statistical thresholds, nonce database, PR reviews |
-| **Part 2** | Quantum Simulation & Attacks | Simulation Lead | State prep, Bell projections, channel noise, intercept-resend attack |
-| **Part 3** | Frontend & Evidence Display | Frontend Lead | React UI, parameter controls, evidence charts, Vercel deployment |
-| **Part 4** | Evaluation, Deployment & Demo | QA / Evaluation Lead | Test harness, error rate analysis, CI/CD, final demo scripts |
-
----
-
 ## 5. Development Roadmap (Milestones)
 
-- [x] **Milestone 0:** Starter UI, repository structure, and collaboration guide.
+- [x] **Milestone 0:** Starter UI, repository structure, team onboarding, and live deployment.
 - [ ] **Milestone 1:** Confirm official problem requirements & select primary QDS protocol.
 - [ ] **Milestone 2:** Run one legitimate protocol simulation on classical hardware.
 - [ ] **Milestone 3:** Implement one defined attack (intercept-resend) and an observable detector.
@@ -82,4 +82,4 @@ Open your browser to [http://localhost:5173](http://localhost:5173).
 - [ ] **Milestone 5:** Expose the experiment through Django REST APIs.
 - [ ] **Milestone 6:** Connect React frontend to live Django backend.
 - [ ] **Milestone 7:** Implement further attacks (replay, channel spoofing) and comprehensive evaluation.
-- [ ] **Milestone 8:** Deploy to Vercel/cloud and prepare defense demonstration.
+- [ ] **Milestone 8:** Deploy full stack and prepare defense demonstration.
