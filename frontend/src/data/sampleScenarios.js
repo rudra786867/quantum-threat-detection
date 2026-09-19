@@ -12,7 +12,7 @@ export const SAMPLE_SCENARIOS = [
     name: 'Legitimate Verification',
     badge: 'Normal Traffic',
     badgeType: 'success',
-    description: 'Alice teleports signature states to Bob via a calibrated, low-noise quantum channel. Bob performs projective Bell measurements and compares outcomes with the classical verification key.',
+    description: 'Alice transmits quantum signature states to Bob over a simulated low-noise optical channel. Bob performs joint Bell-state measurements and compares outcomes with the classical verification key.',
     attackerModel: {
       type: 'None (Passive channel noise only)',
       knowledge: 'None',
