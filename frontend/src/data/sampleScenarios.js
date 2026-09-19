@@ -9,12 +9,12 @@
 export const SAMPLE_SCENARIOS = [
   {
     id: 'legitimate',
-    name: 'Legitimate Verification',
-    badge: 'Normal Traffic',
+    name: 'Genuine Signature (Safe)',
+    badge: 'Safe & Authentic',
     badgeType: 'success',
-    description: 'Alice teleports signature states to Bob via a calibrated, low-noise quantum channel. Bob performs projective Bell measurements and compares outcomes with the classical verification key.',
+    description: 'Alice sends a genuine signature over a clean optical line. Natural static is tiny (~1.6%), well below the 8% limit. Bob confirms it is authentic!',
     attackerModel: {
-      type: 'None (Passive channel noise only)',
+      type: 'None (Clean channel / Honest sender)',
       knowledge: 'None',
       capability: 'None'
     },
@@ -52,14 +52,14 @@ export const SAMPLE_SCENARIOS = [
   },
   {
     id: 'forgery',
-    name: 'Forgery Attempt (Intercept-Resend / False State)',
-    badge: 'Attack Detected',
+    name: 'Eavesdropping / Forgery (Eve Spying)',
+    badge: 'Hacker Caught',
     badgeType: 'danger',
-    description: 'An adversary intercepts the quantum carrier states or attempts to forge signature tokens without possessing the entangled key pairs, forcing projective measurements that collapse the non-orthogonal quantum states.',
+    description: 'A hacker (Eve) intercepts or fakes the quantum signature. Because quantum particles cannot be read without disturbing them, errors spike to 28% (past the 8% limit). Rejected!',
     attackerModel: {
-      type: 'Active Intercept-Resend / State Fabrication',
-      knowledge: 'Public protocol parameters, no private pre-shared entangled states',
-      capability: 'Measures in arbitrary basis and resends substitute qubits'
+      type: 'Active Hacker (Intercept-Resend / State Forgery)',
+      knowledge: 'Public protocol parameters, no private quantum keys',
+      capability: 'Measures unknown particles and sends fake replacements'
     },
     defaultConfig: {
       shots: 256,
@@ -84,7 +84,7 @@ export const SAMPLE_SCENARIOS = [
     },
     sampleDecision: {
       status: 'REJECTED_FORGERY',
-      verdictText: 'Signature Rejected (Forgery Detected)',
+      verdictText: 'Signature Rejected (Forgery Blocked)',
       threatDetected: true,
       threatCategory: 'Quantum State Forgery',
       statisticalJustification: 'Observed QBER (0.282) exceeds the error threshold (τ = 0.080) by 0.202 (252% above allowable limit). This high error rate matches the theoretical disturbance (25% to 50%) caused by unauthorized measurements on non-orthogonal quantum states.',
@@ -95,14 +95,14 @@ export const SAMPLE_SCENARIOS = [
   },
   {
     id: 'replay',
-    name: 'Replay Attempt (Captured Teleportation Transcript)',
-    badge: 'Protocol Violation',
+    name: 'Replay Attack (Stolen Old Signature)',
+    badge: 'Replay Blocked',
     badgeType: 'warning',
-    description: 'An attacker captures a previously successful classical measurement transcript and attempts to reuse it for an unauthorized transaction. While the recorded quantum bits look statistically normal, protocol freshness checks fail.',
+    description: 'A hacker captures an old, valid message and tries to re-send it to authorize a transaction. The quantum data looks fine, but our database catches the duplicate session ID!',
     attackerModel: {
-      type: 'Passive Eavesdropper & Transcript Replayer',
-      knowledge: 'Full classical measurement transcript of a prior valid session',
-      capability: 'Can re-transmit classical packets; cannot resurrect destroyed quantum states'
+      type: 'Replay Attacker (Captures & Resends Transcripts)',
+      knowledge: 'Full classical transcript of a prior valid session',
+      capability: 'Can re-send old network packets; cannot forge new fresh nonces'
     },
     defaultConfig: {
       shots: 256,
@@ -127,7 +127,7 @@ export const SAMPLE_SCENARIOS = [
     },
     sampleDecision: {
       status: 'REJECTED_REPLAY',
-      verdictText: 'Verification Aborted (Replay Detected)',
+      verdictText: 'Verification Blocked (Replay Detected)',
       threatDetected: true,
       threatCategory: 'Session Replay',
       statisticalJustification: 'Quantum measurement statistics appear mathematically valid (QBER 0.019 < τ 0.080), which demonstrates that quantum statistical checks alone cannot protect against classical replay.',
@@ -138,14 +138,14 @@ export const SAMPLE_SCENARIOS = [
   },
   {
     id: 'interference',
-    name: 'Quantum-Channel Interference (Noise / Decoherence)',
-    badge: 'Channel Degraded',
+    name: 'Damaged Fiber / Heavy Static',
+    badge: 'Line Unsafe / Aborted',
     badgeType: 'warning',
-    description: 'Environmental decoherence, fiber attenuation, or misaligned optical polarization introduces high physical noise into the quantum channel, elevating error rates without active adversarial intent.',
+    description: 'Physical static or fiber damage creates a 15% error rate. Because high static makes it impossible to guarantee safety, the system safely aborts instead of taking risks.',
     attackerModel: {
-      type: 'Environmental / Channel Degradation',
+      type: 'Physical Noise (Optical Fiber Static / Decoherence)',
       knowledge: 'None',
-      capability: 'Phase damping, depolarizing noise channel'
+      capability: 'Fiber attenuation, physical environmental noise'
     },
     defaultConfig: {
       shots: 256,

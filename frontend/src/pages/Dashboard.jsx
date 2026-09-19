@@ -9,26 +9,74 @@ export default function Dashboard({ onLaunchScenario, navigateTo }) {
       {/* Hero / Scope Banner */}
       <section className="card" style={{ background: 'linear-gradient(135deg, #18050a 0%, #0d0a12 50%, #1a0812 100%)', border: '1px solid rgba(255, 30, 86, 0.25)', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 30, 86, 0.1)' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <span className="badge badge-info">Research Prototype</span>
-            <span className="badge badge-muted">Milestone 0: Starter Interface</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+            <span className="badge badge-info">Quantum Security Prototype</span>
+            <span className="badge badge-success">No AI / Pure Physics</span>
+            <span className="badge badge-muted">Beginner Friendly</span>
           </div>
           <h1 style={{ fontSize: '1.75rem', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
-            Quantum-Inspired Cyber Threat Detection for Digital Signatures
+            Quantum Digital Signature Threat Detection
           </h1>
-          <p style={{ color: 'var(--text-secondary)', maxWidth: '850px', fontSize: '0.95rem', lineHeight: '1.6' }}>
-            A rigorous prototype investigating threat detection mechanisms for <strong>teleportation-based Quantum Digital Signature (QDS) protocols</strong>. 
-            All detection is driven strictly by <strong>projective quantum measurement statistics</strong> and protocol-layer freshness rules — <em>no artificial intelligence or machine learning black boxes are used</em>.
+          <p style={{ color: 'var(--text-secondary)', maxWidth: '850px', fontSize: '1rem', lineHeight: '1.6' }}>
+            Think of a <strong>Quantum Digital Signature</strong> like a <em>high-tech tamper-evident wax seal</em> on a private letter. 
+            If a hacker tries to spy on, copy, or fake the quantum signature, the fundamental laws of quantum physics <strong>inevitably break the seal</strong>, exposing the attack with 100% mathematical certainty.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginTop: '0.5rem' }}>
             <button className="btn btn-primary" onClick={() => navigateTo('simulation')}>
               <Activity className="w-4 h-4" />
-              Open Simulation Lab
+              Try a Test in Simulation Lab
             </button>
             <button className="btn btn-secondary" onClick={() => navigateTo('protocol')}>
               <BookOpen className="w-4 h-4" />
-              Read Protocol & Assumptions
+              Read How It Works
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works in 3 Simple Steps */}
+      <section className="card" style={{ border: '1px solid rgba(255, 30, 86, 0.25)' }}>
+        <div className="card-header" style={{ marginBottom: '0.75rem', paddingBottom: '0.5rem' }}>
+          <div>
+            <h2 className="card-title" style={{ fontSize: '1.15rem' }}>
+              <ShieldCheck className="w-5 h-5 text-cyan-400" />
+              How It Works (In 3 Simple Steps)
+            </h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.825rem', marginTop: '0.15rem' }}>
+              No physics degree required — here is how the system protects digital transactions:
+            </p>
+          </div>
+        </div>
+
+        <div className="grid-3" style={{ gap: '1rem' }}>
+          <div style={{ backgroundColor: 'var(--bg-secondary)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.5rem' }}>
+              <span style={{ background: 'rgba(0, 240, 168, 0.15)', color: '#00f0a8', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '0.85rem' }}>1</span>
+              <h3 style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-primary)' }}>Alice Signs the Document</h3>
+            </div>
+            <p style={{ fontSize: '0.825rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+              Alice prepares unique quantum particles of light (qubits) that represent her digital signature and sends them across the quantum channel to Bob.
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: 'var(--bg-secondary)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.5rem' }}>
+              <span style={{ background: 'rgba(255, 0, 60, 0.18)', color: '#ff3366', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '0.85rem' }}>2</span>
+              <h3 style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-primary)' }}>Physics Catches Any Spy</h3>
+            </div>
+            <p style={{ fontSize: '0.825rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+              If a hacker (Eve) intercepts or measures the particles, the <em>Quantum No-Cloning Law</em> automatically disturbs them, causing a huge spike in errors (~25%).
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: 'var(--bg-secondary)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.5rem' }}>
+              <span style={{ background: 'rgba(255, 30, 86, 0.18)', color: '#ff1e56', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '0.85rem' }}>3</span>
+              <h3 style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-primary)' }}>Bob Verifies the Security</h3>
+            </div>
+            <p style={{ fontSize: '0.825rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+              Bob checks the error rate. If errors are under <strong>8.0%</strong>, the signature is genuine! If higher, the system immediately blocks the forgery.
+            </p>
           </div>
         </div>
       </section>
@@ -37,49 +85,49 @@ export default function Dashboard({ onLaunchScenario, navigateTo }) {
       <section className="grid-4">
         <div className="metric-box">
           <div className="metric-label">
-            <span>Detection Engine</span>
+            <span>Detection Method</span>
             <Shield className="w-4 h-4 text-cyan-400" />
           </div>
           <div className="metric-value" style={{ fontSize: '1.25rem', color: 'var(--accent-cyan)' }}>
-            Statistical / Non-ML
+            Pure Physics
           </div>
           <div className="metric-sub">
-            Hypothesis testing on <ExplanationTooltip term="QBER" explanation="Quantum Bit Error Rate: the ratio of erroneous bit measurements to total observed shots in the conjugate bases." />
+            Zero AI/ML guesswork. Grounded strictly in quantum mechanics.
           </div>
         </div>
 
         <div className="metric-box">
           <div className="metric-label">
-            <span>Security Threshold (τ)</span>
+            <span>Safety Red Line (τ)</span>
             <ShieldAlert className="w-4 h-4 text-amber-400" />
           </div>
-          <div className="metric-value">0.080</div>
+          <div className="metric-value">8.0% Error</div>
           <div className="metric-sub">
-            Max acceptable error rate (8.0%) before channel abort or forgery alert
+            The security ceiling: any errors above 8% trigger an immediate attack alarm.
           </div>
         </div>
 
         <div className="metric-box">
           <div className="metric-label">
-            <span>Target Fidelity (F)</span>
+            <span>Signal Health</span>
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
           </div>
-          <div className="metric-value">≥ 0.950</div>
+          <div className="metric-value">≥ 95.0%</div>
           <div className="metric-sub">
-            Theoretical state overlap for legitimate <ExplanationTooltip term="Teleportation" explanation="Quantum teleportation transfers unknown quantum states between parties using pre-shared entanglement and classical communication." />
+            State fidelity: shows whether the signature arrived intact and undisturbed.
           </div>
         </div>
 
         <div className="metric-box">
           <div className="metric-label">
-            <span>Simulation Mode</span>
+            <span>Simulation Engine</span>
             <Activity className="w-4 h-4 text-indigo-400" />
           </div>
           <div className="metric-value" style={{ fontSize: '1.25rem', color: 'var(--accent-indigo)' }}>
-            Ordinary CPU
+            Fast CPU Math
           </div>
           <div className="metric-sub">
-            State-vector & density matrix math simulated on local hardware
+            Calculates exact quantum state equations locally on your laptop.
           </div>
         </div>
       </section>

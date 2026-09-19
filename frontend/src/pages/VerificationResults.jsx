@@ -23,6 +23,34 @@ export default function VerificationResults({ result, navigateTo }) {
   const safetyMargin = (evidence.thresholdTau - evidence.observedQBER) * 100;
   const safetyMarginStr = (safetyMargin >= 0 ? '+' : '') + safetyMargin.toFixed(2) + '%';
 
+  // Plain-English takeaway for normal users
+  let plainEnglishHeadline = '';
+  let plainEnglishMessage = '';
+  let plainEnglishBadgeColor = '';
+  let plainEnglishBorderColor = '';
+
+  if (decision.status === 'VERIFIED_AUTHENTIC') {
+    plainEnglishHeadline = '✅ Authentic & Safe to Accept';
+    plainEnglishMessage = `The quantum signature arrived intact! Physical measurement errors were only ${qberPercent}%, well below our ${tauPercent}% safety red line. The single-use session ID is fresh and valid. Alice's signature is verified genuine.`;
+    plainEnglishBadgeColor = 'badge-success';
+    plainEnglishBorderColor = 'rgba(0, 240, 168, 0.4)';
+  } else if (decision.status === 'REJECTED_FORGERY') {
+    plainEnglishHeadline = '🚨 Hacker Caught (Eve Eavesdropping / Forgery)';
+    plainEnglishMessage = `An unauthorized third party attempted to measure or fake the quantum signature particles! Because quantum particles cannot be read without disturbing their state (the No-Cloning Law), this tampering spiked the error rate to ${qberPercent}% (way past our ${tauPercent}% limit). The fraudulent signature was rejected.`;
+    plainEnglishBadgeColor = 'badge-danger';
+    plainEnglishBorderColor = 'rgba(255, 0, 60, 0.5)';
+  } else if (decision.status === 'REJECTED_REPLAY') {
+    plainEnglishHeadline = '🛑 Replay Attack Blocked (Stolen Token Reused)';
+    plainEnglishMessage = `An attacker captured a previously valid transaction and attempted to re-send it. While the recorded quantum signal looked normal, our security database identified that this unique Session Nonce was already used before. The replay attempt was immediately blocked!`;
+    plainEnglishBadgeColor = 'badge-warning';
+    plainEnglishBorderColor = 'rgba(255, 170, 0, 0.5)';
+  } else {
+    plainEnglishHeadline = '⚠️ Unsafe Line (Safely Aborted)';
+    plainEnglishMessage = `The optical line has high physical static (${qberPercent}% errors). Because severe noise makes it impossible to guarantee that an attacker is not hiding inside the static, the detector safely aborted the transaction to protect your security.`;
+    plainEnglishBadgeColor = 'badge-warning';
+    plainEnglishBorderColor = 'rgba(255, 170, 0, 0.5)';
+  }
+
   return (
     <div className="space-y-6">
       {/* Header Summary */}
@@ -47,38 +75,61 @@ export default function VerificationResults({ result, navigateTo }) {
           </span>
         </div>
 
+        {/* Plain-English Executive Summary for Normal Users */}
+        <div style={{
+          backgroundColor: 'var(--bg-secondary)',
+          border: `1px solid ${plainEnglishBorderColor}`,
+          borderRadius: '8px',
+          padding: '1.1rem 1.25rem',
+          marginTop: '0.5rem',
+          marginBottom: '1.25rem',
+          boxShadow: '0 4px 15px rgba(0, 0, 0, 0.4)'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.4rem' }}>
+            <h2 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem', margin: 0 }}>
+              {plainEnglishHeadline}
+            </h2>
+            <span className={`badge ${plainEnglishBadgeColor}`} style={{ fontSize: '0.75rem' }}>
+              {decision.status === 'VERIFIED_AUTHENTIC' ? 'STATUS: SAFE' : 'STATUS: THREAT BLOCKED'}
+            </span>
+          </div>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: '1.5', margin: 0 }}>
+            {plainEnglishMessage}
+          </p>
+        </div>
+
         {/* Core Evidence Grid */}
         <div className="grid-4" style={{ marginTop: '1rem' }}>
           <div className="metric-box">
             <div className="metric-label">
-              <ExplanationTooltip term="Observed QBER" explanation="Quantum Bit Error Rate observed in the verification basis." />
+              <ExplanationTooltip term="Error Rate (QBER)" explanation="Quantum Bit Error Rate: the percentage of errors observed in the received particles." />
             </div>
             <div className="metric-value" style={{ color: isQberExceeded ? 'var(--danger)' : 'var(--success)' }}>
               {qberPercent}%
             </div>
             <div className="metric-sub">
-              Margin: <strong style={{ color: safetyMargin >= 0 ? 'var(--success)' : 'var(--danger)' }}>{safetyMarginStr}</strong> ({isQberExceeded ? 'EXCEEDED' : 'SECURE'})
+              Safety Red Line: <strong>{tauPercent}%</strong> ({isQberExceeded ? 'BREACHED' : 'SAFE'})
             </div>
           </div>
 
           <div className="metric-box">
             <div className="metric-label">
-              <ExplanationTooltip term="State Fidelity (F)" explanation="Overlap between the prepared quantum signature state and the state reconstructed after teleportation." />
+              <ExplanationTooltip term="Signal Health (F)" explanation="State Fidelity: how clearly and intact the signature arrived (target is 95%+)." />
             </div>
             <div className="metric-value">
               {evidence.teleportationFidelity.toFixed(3)}
             </div>
             <div className="metric-sub">
-              Expected legitimate: ≥ 0.950
+              Target healthy: ≥ 0.950
             </div>
           </div>
 
           <div className="metric-box">
             <div className="metric-label">
-              <ExplanationTooltip term="Freshness Nonce" explanation="Unique random token sent with the signature request to prevent replay attacks." />
+              <ExplanationTooltip term="Session ID (Nonce)" explanation="A one-time cryptographic token ensuring the transaction isn't a replay of an old one." />
             </div>
             <div className="metric-value" style={{ fontSize: '1rem', color: evidence.nonceFreshness === 'VALID_UNIQUE' ? 'var(--success)' : 'var(--warning)' }}>
-              {evidence.nonceFreshness === 'VALID_UNIQUE' ? 'VALID' : 'REPLAY DUPLICATE'}
+              {evidence.nonceFreshness === 'VALID_UNIQUE' ? 'VALID & FRESH' : 'REPLAY DUPLICATE'}
             </div>
             <div className="metric-sub font-mono text-xs truncate">
               {config.nonce || 'N/A'}
@@ -87,13 +138,13 @@ export default function VerificationResults({ result, navigateTo }) {
 
           <div className="metric-box">
             <div className="metric-label">
-              <ExplanationTooltip term="Measurement Shots" explanation="Total simulated projective measurements collected for this verification run." />
+              <ExplanationTooltip term="Particles Tested" explanation="Total number of simulated light particles measured during this verification." />
             </div>
             <div className="metric-value">
               {evidence.shotsSimulated}
             </div>
             <div className="metric-sub">
-              Finite-sample statistical test
+              Total particles measured
             </div>
           </div>
         </div>
@@ -102,16 +153,16 @@ export default function VerificationResults({ result, navigateTo }) {
         <div style={{ marginTop: '1.25rem', backgroundColor: 'var(--bg-secondary)', padding: '1rem', borderRadius: '6px', border: '1px solid var(--border-color)' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem', fontSize: '0.8rem', marginBottom: '0.5rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <span>Error Rate vs Security Threshold:</span>
+              <span>Observed Error vs Red Line:</span>
               <span className={`badge ${safetyMargin >= 0 ? 'badge-success' : 'badge-danger'}`} style={{ fontSize: '0.725rem', padding: '0.15rem 0.5rem' }}>
-                Safety Margin (τ - QBER): {safetyMarginStr}
+                Safety Margin: {safetyMarginStr} {safetyMargin >= 0 ? '(Within Safe Zone)' : '(Breached into Danger)'}
               </span>
             </div>
             <span className="font-mono">
-              QBER: <strong>{qberPercent}%</strong> / τ: <strong>{tauPercent}%</strong>
+              Error: <strong>{qberPercent}%</strong> / Limit: <strong>{tauPercent}%</strong>
             </span>
           </div>
-          <div className="progress-track" style={{ height: '12px' }}>
+          <div className="progress-track" style={{ height: '14px' }}>
             <div
               className="progress-fill"
               style={{
@@ -120,12 +171,19 @@ export default function VerificationResults({ result, navigateTo }) {
               }}
             />
           </div>
-          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '0.3rem' }}>
-            <span>0% (Ideal Channel)</span>
-            <span style={{ color: 'var(--warning)' }}>τ = {tauPercent}% (Cutoff)</span>
-            <span>35% (Max Intercept Disturbance)</span>
+          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.725rem', color: 'var(--text-muted)', marginTop: '0.35rem' }}>
+            <span style={{ color: '#00f0a8' }}>🟢 Safe Zone (0% to {tauPercent}%)</span>
+            <span style={{ color: 'var(--warning)' }}>Red Line = {tauPercent}%</span>
+            <span style={{ color: '#ff3366' }}>🔴 Danger Zone ({tauPercent}% to 35%)</span>
           </div>
         </div>
+      </div>
+
+      {/* Technical Evidence Divider */}
+      <div style={{ marginTop: '0.5rem', marginBottom: '0.25rem' }}>
+        <h3 style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+          🔬 Deep Scientific Evidence & Audit Logs (For Technical Evaluators)
+        </h3>
       </div>
 
       {/* Decision Rationale & Monitoring Warnings */}
