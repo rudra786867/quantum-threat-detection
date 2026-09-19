@@ -14,12 +14,12 @@ export default function Header({ currentPage, setCurrentPage, backendConnected =
     <header className="navbar">
       <div className="nav-container">
         <div className="brand-section">
-          <div style={{ padding: '6px', background: 'rgba(56, 189, 248, 0.1)', borderRadius: '8px', border: '1px solid rgba(56, 189, 248, 0.2)' }}>
+          <div style={{ padding: '6px', background: 'rgba(255, 30, 86, 0.12)', borderRadius: '8px', border: '1px solid rgba(255, 30, 86, 0.3)', boxShadow: '0 0 12px rgba(255, 30, 86, 0.25)' }}>
             <Atom className="brand-icon" />
           </div>
           <div>
             <div className="brand-title">QDS Threat Detector</div>
-            <div className="brand-subtitle">Quantum Digital Signature Security</div>
+            <div className="brand-subtitle" style={{ color: '#ff4d79', letterSpacing: '0.06em' }}>Quantum Digital Signature Security</div>
           </div>
         </div>
 

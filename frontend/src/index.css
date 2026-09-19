@@ -1,22 +1,30 @@
-/* Quantum-Inspired Cyber Threat Detection - Base Styles */
+/* Quantum-Inspired Cyber Threat Detection - Red-Black & Neon Lunar Theme */
 :root {
-  --bg-primary: #080d1a;
-  --bg-secondary: #0f172a;
-  --bg-card: #151f36;
-  --bg-card-hover: #1c2a47;
-  --border-color: #263554;
-  --border-highlight: #3b82f6;
-  
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  /* Red-Black & Neon Lunar Palette */
+  --bg-primary: #050508;
+  --bg-secondary: #0b0a10;
+  --bg-card: #110f17;
+  --bg-card-hover: #191422;
+  --border-color: #261a2b;
+  --border-highlight: #ff1e56;
 
-  --accent-cyan: #38bdf8;
-  --accent-blue: #3b82f6;
-  --accent-indigo: #818cf8;
-  --success: #10b981;
-  --warning: #f59e0b;
-  --danger: #ef4444;
+  /* Lunar Silver & White Typography */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #847d92;
+
+  /* Neon Accents */
+  --accent-cyan: #ff2a5f;       /* Mapped to Cyber Neon Crimson */
+  --accent-red: #ff1e56;        /* Vivid Neon Laser Red */
+  --accent-blue: #e11d48;       /* Crimson Rose */
+  --accent-indigo: #ff4d79;     /* Neon Lunar Magenta */
+  --lunar-white: #f1f5f9;      /* Cold Moonlit Luminescence */
+  --lunar-glow: rgba(241, 245, 249, 0.85);
+
+  /* Status Colors with Neon Radiance */
+  --success: #00f0a8;
+  --warning: #ffaa00;
+  --danger: #ff003c;
 
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -30,6 +38,10 @@
 
 body {
   background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255, 30, 86, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 100% 100%, rgba(255, 30, 86, 0.03) 0%, transparent 40%);
+  background-attachment: fixed;
   color: var(--text-primary);
   font-family: var(--font-sans);
   line-height: 1.5;
@@ -58,9 +70,10 @@ code, pre, .font-mono {
 
 /* Persistent Banner */
 .demo-banner {
-  background: linear-gradient(90deg, #1e1b4b 0%, #0f172a 50%, #1e1b4b 100%);
-  border-bottom: 1px solid #4338ca;
-  color: #c7d2fe;
+  background: linear-gradient(90deg, #1c0308 0%, #09080d 50%, #1c0308 100%);
+  border-bottom: 1px solid rgba(255, 30, 86, 0.3);
+  box-shadow: 0 0 15px rgba(255, 30, 86, 0.12);
+  color: #ffe4e6;
   font-size: 0.85rem;
   font-weight: 500;
   padding: 0.5rem 1rem;
@@ -73,21 +86,24 @@ code, pre, .font-mono {
 }
 
 .demo-banner-badge {
-  background-color: #3730a3;
-  color: #e0e7ff;
+  background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
+  color: #fff;
   font-size: 0.75rem;
-  padding: 0.15rem 0.5rem;
+  padding: 0.15rem 0.55rem;
   border-radius: 4px;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.05em;
+  border: 1px solid rgba(255, 0, 60, 0.4);
+  box-shadow: 0 0 8px rgba(255, 0, 60, 0.35);
 }
 
 /* Navigation Header */
 .navbar {
-  background-color: rgba(15, 23, 42, 0.95);
-  backdrop-filter: blur(8px);
+  background-color: rgba(11, 10, 16, 0.92);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 30, 86, 0.15);
   position: sticky;
   top: 0;
   z-index: 40;
@@ -111,7 +127,8 @@ code, pre, .font-mono {
 .brand-icon {
   width: 2rem;
   height: 2rem;
-  color: var(--accent-cyan);
+  color: var(--accent-red);
+  filter: drop-shadow(0 0 6px rgba(255, 30, 86, 0.6));
 }
 
 .brand-title {
@@ -146,7 +163,7 @@ code, pre, .font-mono {
   font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.2s ease-in-out;
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -155,13 +172,15 @@ code, pre, .font-mono {
 
 .nav-btn:hover {
   background-color: var(--bg-card);
-  color: var(--text-primary);
+  color: #ffffff;
+  border-color: rgba(255, 30, 86, 0.2);
 }
 
 .nav-btn.active {
-  background-color: #1e293b;
+  background-color: rgba(255, 30, 86, 0.12);
   border-color: var(--border-highlight);
-  color: var(--accent-cyan);
+  color: #ff3b6f;
+  box-shadow: 0 0 12px rgba(255, 30, 86, 0.25);
 }
 
 /* Cards & Containers */
@@ -171,11 +190,13 @@ code, pre, .font-mono {
   border-radius: 8px;
   padding: 1.25rem;
   margin-bottom: 1rem;
-  transition: border-color 0.15s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-  border-color: #334b75;
+  border-color: rgba(255, 30, 86, 0.35);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 30, 86, 0.12);
 }
 
 .card-header {
@@ -224,6 +245,12 @@ code, pre, .font-mono {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: border-color 0.2s ease;
+}
+
+.metric-box:hover {
+  border-color: rgba(255, 30, 86, 0.35);
 }
 
 .metric-label {
@@ -264,33 +291,36 @@ code, pre, .font-mono {
 }
 
 .badge-success {
-  background-color: rgba(16, 185, 129, 0.15);
-  color: #34d399;
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  background-color: rgba(0, 240, 168, 0.12);
+  color: #00f0a8;
+  border: 1px solid rgba(0, 240, 168, 0.35);
+  box-shadow: 0 0 8px rgba(0, 240, 168, 0.2);
 }
 
 .badge-danger {
-  background-color: rgba(239, 68, 68, 0.15);
-  color: #f87171;
-  border: 1px solid rgba(239, 68, 68, 0.3);
+  background-color: rgba(255, 0, 60, 0.16);
+  color: #ff3366;
+  border: 1px solid rgba(255, 0, 60, 0.45);
+  box-shadow: 0 0 10px rgba(255, 0, 60, 0.25);
 }
 
 .badge-warning {
-  background-color: rgba(245, 158, 11, 0.15);
-  color: #fbbf24;
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  background-color: rgba(255, 170, 0, 0.14);
+  color: #ffaa00;
+  border: 1px solid rgba(255, 170, 0, 0.35);
 }
 
 .badge-info {
-  background-color: rgba(56, 189, 248, 0.15);
-  color: #38bdf8;
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  background-color: rgba(241, 245, 249, 0.1);
+  color: #f1f5f9;
+  border: 1px solid rgba(241, 245, 249, 0.3);
+  box-shadow: 0 0 8px rgba(241, 245, 249, 0.15);
 }
 
 .badge-muted {
-  background-color: #1e293b;
-  color: #94a3b8;
-  border: 1px solid #334155;
+  background-color: #191422;
+  color: #cbd5e1;
+  border: 1px solid #2e2236;
 }
 
 /* Forms & Inputs */
@@ -315,11 +345,12 @@ code, pre, .font-mono {
   border-radius: 6px;
   font-size: 0.875rem;
   outline: none;
-  transition: border-color 0.15s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .form-select:focus, .form-input:focus {
   border-color: var(--border-highlight);
+  box-shadow: 0 0 10px rgba(255, 30, 86, 0.3);
 }
 
 /* Buttons */
@@ -333,7 +364,7 @@ code, pre, .font-mono {
   font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid transparent;
   box-sizing: border-box;
 }
@@ -351,27 +382,35 @@ code, pre, .font-mono {
 }
 
 .btn-primary {
-  background-color: #2563eb;
+  background: linear-gradient(135deg, #ff1e56 0%, #c8103d 100%);
   color: #ffffff;
+  border: 1px solid #ff4d79;
+  box-shadow: 0 0 14px rgba(255, 30, 86, 0.4);
 }
 
 .btn-primary:hover:not(:disabled) {
-  background-color: #1d4ed8;
+  background: linear-gradient(135deg, #ff3b6f 0%, #dc143c 100%);
+  box-shadow: 0 0 22px rgba(255, 30, 86, 0.65);
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
-  background-color: #1e293b;
+  background-color: #16121d;
   color: var(--text-primary);
-  border-color: var(--border-color);
+  border-color: #36243d;
 }
 
 .btn-secondary:hover:not(:disabled) {
-  background-color: #334155;
+  background-color: #241a2e;
+  border-color: var(--border-highlight);
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(255, 30, 86, 0.2);
 }
 
 .btn:disabled {
-  opacity: 0.5;
+  opacity: 0.45;
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 /* Data Tables */
@@ -380,6 +419,7 @@ code, pre, .font-mono {
   overflow-x: auto;
   border-radius: 6px;
   border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
 }
 
 .data-table {
@@ -390,7 +430,7 @@ code, pre, .font-mono {
 }
 
 .data-table th {
-  background-color: var(--bg-secondary);
+  background-color: #0b0a10;
   color: var(--text-secondary);
   padding: 0.65rem 0.85rem;
   font-weight: 600;
@@ -407,7 +447,7 @@ code, pre, .font-mono {
 }
 
 .data-table tr:hover td {
-  background-color: rgba(30, 41, 59, 0.4);
+  background-color: rgba(255, 30, 86, 0.06);
 }
 
 /* Tooltip / Term Explanations */
@@ -416,8 +456,8 @@ code, pre, .font-mono {
   display: inline-flex;
   align-items: center;
   cursor: help;
-  color: var(--accent-cyan);
-  border-bottom: 1px dotted var(--accent-cyan);
+  color: var(--accent-red);
+  border-bottom: 1px dotted var(--accent-red);
 }
 
 .term-bubble {
@@ -426,14 +466,14 @@ code, pre, .font-mono {
   bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #0f172a;
+  background-color: #110f17;
   color: #f1f5f9;
   padding: 0.5rem 0.75rem;
   border-radius: 6px;
   font-size: 0.75rem;
   width: 240px;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 30, 86, 0.2);
+  border: 1px solid var(--border-highlight);
   z-index: 50;
   line-height: 1.4;
   text-align: left;
@@ -454,15 +494,22 @@ code, pre, .font-mono {
 }
 
 .callout-info {
-  background-color: rgba(56, 189, 248, 0.08);
-  border-color: var(--accent-cyan);
-  color: #bae6fd;
+  background-color: rgba(241, 245, 249, 0.05);
+  border-color: #f1f5f9;
+  color: #f1f5f9;
+  box-shadow: inset 0 0 15px rgba(241, 245, 249, 0.03);
 }
 
 .callout-warning {
-  background-color: rgba(245, 158, 11, 0.08);
+  background-color: rgba(255, 170, 0, 0.08);
   border-color: var(--warning);
-  color: #fde68a;
+  color: #ffd280;
+}
+
+.callout-danger {
+  background-color: rgba(255, 0, 60, 0.08);
+  border-color: var(--danger);
+  color: #ff8099;
 }
 
 /* Progress bar */
@@ -479,6 +526,7 @@ code, pre, .font-mono {
   height: 100%;
   border-radius: 9999px;
   transition: width 0.3s ease;
+  box-shadow: 0 0 8px currentColor;
 }
 
 /* Footer */
@@ -515,4 +563,28 @@ svg.w-10 {
 .btn svg {
   display: inline-block;
   vertical-align: middle;
+}
+
+/* Neon Red & Lunar Color Utility Classes */
+.text-cyan-400 {
+  color: #ff2a5f !important;
+  filter: drop-shadow(0 0 4px rgba(255, 42, 95, 0.4));
+}
+.text-indigo-400 {
+  color: #ff6b8b !important;
+  filter: drop-shadow(0 0 4px rgba(255, 107, 139, 0.3));
+}
+.text-emerald-400 {
+  color: #00f0a8 !important;
+  filter: drop-shadow(0 0 4px rgba(0, 240, 168, 0.3));
+}
+.text-amber-400 {
+  color: #ffaa00 !important;
+  filter: drop-shadow(0 0 4px rgba(255, 170, 0, 0.3));
+}
+.text-slate-400 {
+  color: #cbd5e1 !important;
+}
+.text-slate-500 {
+  color: #847d92 !important;
 }

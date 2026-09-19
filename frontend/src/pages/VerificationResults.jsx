@@ -252,7 +252,7 @@ export default function VerificationResults({ result, navigateTo }) {
             </thead>
             <tbody>
               {SAMPLE_SCENARIOS.map((sc) => (
-                <tr key={sc.id} style={{ backgroundColor: sc.id === currentResult.scenarioId ? 'rgba(56, 189, 248, 0.05)' : 'transparent' }}>
+                <tr key={sc.id} style={{ backgroundColor: sc.id === currentResult.scenarioId ? 'rgba(255, 30, 86, 0.1)' : 'transparent' }}>
                   <td style={{ fontWeight: 600 }}>{sc.name}</td>
                   <td className="font-mono" style={{ color: sc.sampleEvidence.observedQBER > 0.08 ? 'var(--danger)' : 'var(--success)' }}>
                     {(sc.sampleEvidence.observedQBER * 100).toFixed(1)}%

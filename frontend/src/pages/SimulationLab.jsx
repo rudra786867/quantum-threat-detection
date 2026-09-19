@@ -86,7 +86,7 @@ export default function SimulationLab({
                 <button
                   type="button"
                   onClick={() => applyPreset('legitimate', 256, 0.01, 0.08, 'fresh-session-nonce-clean')}
-                  style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem', borderRadius: '4px', border: '1px solid rgba(16, 185, 129, 0.3)', backgroundColor: 'rgba(16, 185, 129, 0.1)', color: '#34d399', cursor: 'pointer', fontWeight: 500 }}
+                  style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem', borderRadius: '4px', border: '1px solid rgba(0, 240, 168, 0.35)', backgroundColor: 'rgba(0, 240, 168, 0.1)', color: '#00f0a8', cursor: 'pointer', fontWeight: 500, boxShadow: '0 0 6px rgba(0, 240, 168, 0.15)' }}
                   disabled={isRunning}
                 >
                   Clean (1%)
@@ -94,7 +94,7 @@ export default function SimulationLab({
                 <button
                   type="button"
                   onClick={() => applyPreset('forgery', 256, 0.02, 0.08, 'fresh-session-nonce-attack')}
-                  style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem', borderRadius: '4px', border: '1px solid rgba(239, 68, 68, 0.3)', backgroundColor: 'rgba(239, 68, 68, 0.1)', color: '#f87171', cursor: 'pointer', fontWeight: 500 }}
+                  style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem', borderRadius: '4px', border: '1px solid rgba(255, 0, 60, 0.45)', backgroundColor: 'rgba(255, 0, 60, 0.15)', color: '#ff3366', cursor: 'pointer', fontWeight: 600, boxShadow: '0 0 8px rgba(255, 0, 60, 0.25)' }}
                   disabled={isRunning}
                 >
                   Attack (Eve)
@@ -102,7 +102,7 @@ export default function SimulationLab({
                 <button
                   type="button"
                   onClick={() => applyPreset('interference', 256, 0.15, 0.08, 'fresh-session-nonce-noise')}
-                  style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem', borderRadius: '4px', border: '1px solid rgba(245, 158, 11, 0.3)', backgroundColor: 'rgba(245, 158, 11, 0.1)', color: '#fbbf24', cursor: 'pointer', fontWeight: 500 }}
+                  style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem', borderRadius: '4px', border: '1px solid rgba(255, 170, 0, 0.35)', backgroundColor: 'rgba(255, 170, 0, 0.1)', color: '#ffaa00', cursor: 'pointer', fontWeight: 500 }}
                   disabled={isRunning}
                 >
                   Noise (15%)
@@ -110,7 +110,7 @@ export default function SimulationLab({
                 <button
                   type="button"
                   onClick={() => applyPreset('replay', 256, 0.02, 0.08, 'fresh-session-nonce-8f2a91')}
-                  style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem', borderRadius: '4px', border: '1px solid rgba(129, 140, 248, 0.3)', backgroundColor: 'rgba(129, 140, 248, 0.1)', color: '#818cf8', cursor: 'pointer', fontWeight: 500 }}
+                  style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem', borderRadius: '4px', border: '1px solid rgba(241, 245, 249, 0.3)', backgroundColor: 'rgba(241, 245, 249, 0.1)', color: '#f1f5f9', cursor: 'pointer', fontWeight: 500, boxShadow: '0 0 6px rgba(241, 245, 249, 0.15)' }}
                   disabled={isRunning}
                 >
                   Replay

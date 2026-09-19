@@ -7,7 +7,7 @@ export default function Dashboard({ onLaunchScenario, navigateTo }) {
   return (
     <div className="space-y-6">
       {/* Hero / Scope Banner */}
-      <section className="card" style={{ background: 'linear-gradient(135deg, #111a2e 0%, #151f36 100%)' }}>
+      <section className="card" style={{ background: 'linear-gradient(135deg, #18050a 0%, #0d0a12 50%, #1a0812 100%)', border: '1px solid rgba(255, 30, 86, 0.25)', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 30, 86, 0.1)' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <span className="badge badge-info">Research Prototype</span>
