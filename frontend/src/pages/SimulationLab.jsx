@@ -160,18 +160,18 @@ export default function SimulationLab({
               <button
                 type="submit"
                 className="btn btn-primary"
-                style={{ width: '100%', padding: '0.75rem' }}
+                style={{ width: '100%', height: '44px', padding: '0 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', overflow: 'hidden' }}
                 disabled={isRunning}
               >
                 {isRunning ? (
                   <>
-                    <RefreshCw className="w-4 h-4 animate-spin" />
-                    Simulating Teleportation & Measurement...
+                    <RefreshCw style={{ width: '16px', height: '16px', minWidth: '16px', minHeight: '16px' }} className="animate-spin" />
+                    <span>Simulating Teleportation & Measurement...</span>
                   </>
                 ) : (
                   <>
-                    <Play className="w-4 h-4" />
-                    Run Demonstration Session
+                    <Play style={{ width: '16px', height: '16px', minWidth: '16px', minHeight: '16px' }} />
+                    <span>Run Demonstration Session</span>
                   </>
                 )}
               </button>
