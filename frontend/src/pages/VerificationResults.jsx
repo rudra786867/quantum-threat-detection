@@ -20,6 +20,8 @@ export default function VerificationResults({ result, navigateTo }) {
   const qberPercent = (evidence.observedQBER * 100).toFixed(2);
   const tauPercent = (evidence.thresholdTau * 100).toFixed(2);
   const isQberExceeded = evidence.observedQBER > evidence.thresholdTau;
+  const safetyMargin = (evidence.thresholdTau - evidence.observedQBER) * 100;
+  const safetyMarginStr = (safetyMargin >= 0 ? '+' : '') + safetyMargin.toFixed(2) + '%';
 
   return (
     <div className="space-y-6">
@@ -55,7 +57,7 @@ export default function VerificationResults({ result, navigateTo }) {
               {qberPercent}%
             </div>
             <div className="metric-sub">
-              Threshold τ = {tauPercent}% ({isQberExceeded ? 'EXCEEDED' : 'WITHIN TOLERANCE'})
+              Margin: <strong style={{ color: safetyMargin >= 0 ? 'var(--success)' : 'var(--danger)' }}>{safetyMarginStr}</strong> ({isQberExceeded ? 'EXCEEDED' : 'SECURE'})
             </div>
           </div>
 
@@ -98,8 +100,13 @@ export default function VerificationResults({ result, navigateTo }) {
 
         {/* Visual Threshold Bar */}
         <div style={{ marginTop: '1.25rem', backgroundColor: 'var(--bg-secondary)', padding: '1rem', borderRadius: '6px', border: '1px solid var(--border-color)' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', marginBottom: '0.4rem' }}>
-            <span>Error Rate vs Security Threshold:</span>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem', fontSize: '0.8rem', marginBottom: '0.5rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span>Error Rate vs Security Threshold:</span>
+              <span className={`badge ${safetyMargin >= 0 ? 'badge-success' : 'badge-danger'}`} style={{ fontSize: '0.725rem', padding: '0.15rem 0.5rem' }}>
+                Safety Margin (τ - QBER): {safetyMarginStr}
+              </span>
+            </div>
             <span className="font-mono">
               QBER: <strong>{qberPercent}%</strong> / τ: <strong>{tauPercent}%</strong>
             </span>

@@ -8,6 +8,7 @@ from rest_framework import status
 
 from .models import SessionNonce, VerificationAudit
 from .engine.detector import evaluate_threat_evidence
+from .quantum.simulator import run_qds_simulation
 
 
 @api_view(["GET"])
@@ -55,31 +56,26 @@ def verify_signature(request):
         nonce_obj.consumed_at = timezone.now()
         nonce_obj.save()
 
-    # 3. Simulate Observable Quantum Teleportation Evidence (Linear Algebra Simulation)
-    # The physical disturbance depends on the underlying physical interaction:
+    # 3. Simulate Observable Quantum Teleportation Evidence using Real Quantum Physics Engine
     if scenario_id == "forgery":
-        # Intercept-resend attacker unavoidably induces ~25% theoretical disturbance on non-orthogonal bases
-        base_err = 0.25 + (channel_noise * 0.5)
-        observed_qber = float(np.clip(np.random.normal(base_err, 0.015), 0.20, 0.40))
-        fidelity = float(np.clip(1.0 - observed_qber, 0.65, 0.78))
+        sim_attack = "intercept_resend"
+        sim_noise = channel_noise
     elif scenario_id == "interference":
-        # High depolarizing channel noise
-        observed_qber = float(np.clip(channel_noise + np.random.normal(0, 0.01), 0.10, 0.30))
-        fidelity = float(np.clip(1.0 - (observed_qber * 0.8), 0.80, 0.90))
+        sim_attack = "none"
+        sim_noise = max(channel_noise, 0.15)
     else:
-        # Legitimate or Replay (Replay uses legitimate quantum physics, but duplicate nonce)
-        observed_qber = float(np.clip(channel_noise + np.random.normal(0, 0.005), 0.005, 0.04))
-        fidelity = float(np.clip(1.0 - observed_qber, 0.95, 0.999))
+        sim_attack = "none"
+        sim_noise = channel_noise
 
-    # Generate Bell-State Measurement (BSM) counts
-    # Under ideal conditions, four Bell states |Φ+>, |Φ->, |Ψ+>, |Ψ-> are uniformly distributed (25% each)
-    base_counts = np.random.multinomial(shots, [0.25, 0.25, 0.25, 0.25])
-    bell_counts = {
-        "|Φ+⟩": int(base_counts[0]),
-        "|Φ-⟩": int(base_counts[1]),
-        "|Ψ+⟩": int(base_counts[2]),
-        "|Ψ-⟩": int(base_counts[3]),
-    }
+    sim_result = run_qds_simulation(
+        shots=shots,
+        noise_rate=sim_noise,
+        attack_type=sim_attack
+    )
+
+    observed_qber = sim_result["observed_qber"]
+    fidelity = sim_result["teleportation_fidelity"]
+    bell_counts = sim_result["bell_counts"]
 
     # 4. Invoke the Pure Non-ML Detection Engine
     # NOTICE: The detector receives ONLY observable physical metrics and protocol headers.

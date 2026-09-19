@@ -39,6 +39,14 @@ export default function SimulationLab({
     });
   };
 
+  const applyPreset = (scId, sh, n, t, non) => {
+    setSelectedScenarioId(scId);
+    setShots(sh);
+    setNoise(n);
+    setThreshold(t);
+    setNonce(non);
+  };
+
   return (
     <div className="space-y-6">
       {/* Workflow Navigation Tracker */}
@@ -69,6 +77,47 @@ export default function SimulationLab({
           </div>
 
           <form onSubmit={(e) => { e.preventDefault(); handleRun(); }}>
+            {/* Quick Evaluation Presets */}
+            <div style={{ marginBottom: '1.25rem', backgroundColor: 'var(--bg-secondary)', padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)' }}>
+              <span style={{ fontSize: '0.725rem', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', display: 'block', marginBottom: '0.4rem' }}>
+                Quick Test Presets:
+              </span>
+              <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
+                <button
+                  type="button"
+                  onClick={() => applyPreset('legitimate', 256, 0.01, 0.08, 'fresh-session-nonce-clean')}
+                  style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem', borderRadius: '4px', border: '1px solid rgba(16, 185, 129, 0.3)', backgroundColor: 'rgba(16, 185, 129, 0.1)', color: '#34d399', cursor: 'pointer', fontWeight: 500 }}
+                  disabled={isRunning}
+                >
+                  Clean (1%)
+                </button>
+                <button
+                  type="button"
+                  onClick={() => applyPreset('forgery', 256, 0.02, 0.08, 'fresh-session-nonce-attack')}
+                  style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem', borderRadius: '4px', border: '1px solid rgba(239, 68, 68, 0.3)', backgroundColor: 'rgba(239, 68, 68, 0.1)', color: '#f87171', cursor: 'pointer', fontWeight: 500 }}
+                  disabled={isRunning}
+                >
+                  Attack (Eve)
+                </button>
+                <button
+                  type="button"
+                  onClick={() => applyPreset('interference', 256, 0.15, 0.08, 'fresh-session-nonce-noise')}
+                  style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem', borderRadius: '4px', border: '1px solid rgba(245, 158, 11, 0.3)', backgroundColor: 'rgba(245, 158, 11, 0.1)', color: '#fbbf24', cursor: 'pointer', fontWeight: 500 }}
+                  disabled={isRunning}
+                >
+                  Noise (15%)
+                </button>
+                <button
+                  type="button"
+                  onClick={() => applyPreset('replay', 256, 0.02, 0.08, 'fresh-session-nonce-8f2a91')}
+                  style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem', borderRadius: '4px', border: '1px solid rgba(129, 140, 248, 0.3)', backgroundColor: 'rgba(129, 140, 248, 0.1)', color: '#818cf8', cursor: 'pointer', fontWeight: 500 }}
+                  disabled={isRunning}
+                >
+                  Replay
+                </button>
+              </div>
+            </div>
+
             <div className="form-group">
               <label className="form-label">
                 Select Example Scenario:
