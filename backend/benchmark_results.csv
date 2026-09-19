@@ -1,0 +1,401 @@
+scenario,qber,nonce_valid,quantum_disturbance,replay_detected,detected,latency_ms
+A (Legitimate),0.01927954835211036,True,False,False,False,4.827096399668481
+A (Legitimate),0.01944342069216169,True,False,False,False,5.701983725098863
+A (Legitimate),0.019362058581085567,True,False,False,False,3.5026465856590425
+A (Legitimate),0.021661591720338578,True,False,False,False,4.7326625215028315
+A (Legitimate),0.018915206579274025,True,False,False,False,5.115884786700855
+A (Legitimate),0.021161488684533606,True,False,False,False,6.163558686599143
+A (Legitimate),0.023283182533993346,True,False,False,False,5.110507177443832
+A (Legitimate),0.016308391988275897,True,False,False,False,3.985337632512283
+A (Legitimate),0.02123171097605601,True,False,False,False,6.311080827204048
+A (Legitimate),0.02020828431951692,True,False,False,False,4.893676706229216
+A (Legitimate),0.022658881102004348,True,False,False,False,3.5464547019913217
+A (Legitimate),0.018438613414277202,True,False,False,False,5.490362532593525
+A (Legitimate),0.024367021926897235,True,False,False,False,4.759370327344865
+A (Legitimate),0.02188299929343955,True,False,False,False,5.248213449328414
+A (Legitimate),0.02391163404351821,True,False,False,False,3.8867777857518275
+A (Legitimate),0.02284125343792693,True,False,False,False,3.4854796082748605
+A (Legitimate),0.006900272888905741,True,False,False,False,4.393109271800498
+A (Legitimate),0.015420949768270027,True,False,False,False,5.876012243056406
+A (Legitimate),0.023321329498064473,True,False,False,False,3.780925258704305
+A (Legitimate),0.024236807116740002,True,False,False,False,3.9977971757576505
+A (Legitimate),0.01956878076831858,True,False,False,False,4.706100222043468
+A (Legitimate),0.020572099287304607,True,False,False,False,5.8186363115437665
+A (Legitimate),0.023192068953962218,True,False,False,False,5.349885101869209
+A (Legitimate),0.023249740489031494,True,False,False,False,5.478492037650119
+A (Legitimate),0.016865072673902002,True,False,False,False,4.282628906183422
+A (Legitimate),0.017650158629319932,True,False,False,False,5.4993264004767815
+A (Legitimate),0.01874942214501308,True,False,False,False,7.335754222480547
+A (Legitimate),0.015903537289067533,True,False,False,False,3.9011254000978415
+A (Legitimate),0.02384236757734848,True,False,False,False,6.421849981343465
+A (Legitimate),0.0225284634541963,True,False,False,False,5.835817345967674
+A (Legitimate),0.02713172488721081,True,False,False,False,4.905972523983696
+A (Legitimate),0.012885205334305115,True,False,False,False,4.467923451681287
+A (Legitimate),0.02476447878658288,True,False,False,False,3.5563215939217114
+A (Legitimate),0.020167656603936306,True,False,False,False,5.253237359342062
+A (Legitimate),0.018422039175931645,True,False,False,False,5.723631986368097
+A (Legitimate),0.022903898707632833,True,False,False,False,7.321408516900731
+A (Legitimate),0.023099838838865676,True,False,False,False,4.390596541356938
+A (Legitimate),0.01719101203832985,True,False,False,False,4.168418898757993
+A (Legitimate),0.024761367799079104,True,False,False,False,4.433167165186299
+A (Legitimate),0.01964869613149701,True,False,False,False,5.749302619289675
+A (Legitimate),0.016382685046742968,True,False,False,False,4.706342036382281
+A (Legitimate),0.010793568671980421,True,False,False,False,3.9175213809612868
+A (Legitimate),0.01716131793904075,True,False,False,False,5.415760988516672
+A (Legitimate),0.025967466362216488,True,False,False,False,4.981533186836288
+A (Legitimate),0.021306821395999015,True,False,False,False,5.167969368547232
+A (Legitimate),0.02542370556726802,True,False,False,False,5.893355198738207
+A (Legitimate),0.021368466577037712,True,False,False,False,3.989055696554688
+A (Legitimate),0.024516926571722976,True,False,False,False,5.381047127955752
+A (Legitimate),0.0261347077485711,True,False,False,False,4.970093407318786
+A (Legitimate),0.029765504622419232,True,False,False,False,4.641123659678177
+A (Legitimate),0.027965302071315215,True,False,False,False,5.115118972607233
+A (Legitimate),0.017418654953772487,True,False,False,False,3.8715521272076048
+A (Legitimate),0.019244847242305817,True,False,False,False,6.423321026167184
+A (Legitimate),0.02408187248307364,True,False,False,False,5.688883864266003
+A (Legitimate),0.008120637134544011,True,False,False,False,5.710964204570039
+A (Legitimate),0.02277926205459921,True,False,False,False,4.450073715594673
+A (Legitimate),0.01686307816909802,True,False,False,False,4.997689548186419
+A (Legitimate),0.028624381315743658,True,False,False,False,3.9448993005776756
+A (Legitimate),0.017860974826318578,True,False,False,False,6.3617847503505836
+A (Legitimate),0.01776924600286125,True,False,False,False,4.63574852413906
+A (Legitimate),0.020488881736443382,True,False,False,False,3.7587106233643044
+A (Legitimate),0.021099727150750064,True,False,False,False,3.7903824030263653
+A (Legitimate),0.024425991551790725,True,False,False,False,5.003180822757989
+A (Legitimate),0.03141715733423875,True,False,False,False,5.280840513531035
+A (Legitimate),0.026828447452163742,True,False,False,False,3.6967360282826363
+A (Legitimate),0.019389303282390673,True,False,False,False,5.323145654014103
+A (Legitimate),0.028728604591855243,True,False,False,False,3.3190840619790363
+A (Legitimate),0.024953098399044114,True,False,False,False,5.591354013815916
+A (Legitimate),0.02766773097869065,True,False,False,False,5.712385518078721
+A (Legitimate),0.02026035592551974,True,False,False,False,4.478350349581841
+A (Legitimate),0.0137591014107864,True,False,False,False,5.19542276490297
+A (Legitimate),0.019041516155023447,True,False,False,False,7.020267338079641
+A (Legitimate),0.016944875860075762,True,False,False,False,5.320391845205113
+A (Legitimate),0.012154992901621352,True,False,False,False,4.604537421673822
+A (Legitimate),0.021305739400455496,True,False,False,False,5.823960012519505
+A (Legitimate),0.027240508434140505,True,False,False,False,4.955851823670731
+A (Legitimate),0.014413775604695568,True,False,False,False,5.45785039949154
+A (Legitimate),0.022584935492068966,True,False,False,False,5.49165834283827
+A (Legitimate),0.016498561504126336,True,False,False,False,6.133384397586887
+A (Legitimate),0.020439479554522574,True,False,False,False,5.699824621715986
+A (Legitimate),0.02637036620047224,True,False,False,False,5.609272320565851
+A (Legitimate),0.021432580139908855,True,False,False,False,7.152795235100524
+A (Legitimate),0.02121851520486075,True,False,False,False,4.704035767227919
+A (Legitimate),0.02055983518791515,True,False,False,False,6.482768668437135
+A (Legitimate),0.020593562434434002,True,False,False,False,5.519377655139212
+A (Legitimate),0.025978657201660815,True,False,False,False,4.4871413897731705
+A (Legitimate),0.011367151153731773,True,False,False,False,5.299423152216441
+A (Legitimate),0.021148673972619846,True,False,False,False,4.391989821439186
+A (Legitimate),0.024355431905212083,True,False,False,False,5.60756737698457
+A (Legitimate),0.015025037892002917,True,False,False,False,5.518218444021203
+A (Legitimate),0.019019475205487125,True,False,False,False,3.516974729792719
+A (Legitimate),0.022264751165329843,True,False,False,False,4.954785373320609
+A (Legitimate),0.016273585504050662,True,False,False,False,5.522945586896748
+A (Legitimate),0.022440466360961895,True,False,False,False,4.422462816055702
+A (Legitimate),0.022001760952673387,True,False,False,False,6.015064936192444
+A (Legitimate),0.01643666682157149,True,False,False,False,5.380890027401593
+A (Legitimate),0.020013778752406536,True,False,False,False,7.266010310650884
+A (Legitimate),0.010688485146109065,True,False,False,False,5.695283931406463
+A (Legitimate),0.018468774901093922,True,False,False,False,4.899802451170167
+A (Legitimate),0.029507944881916347,True,False,False,False,4.991426848739206
+B (Forgery - Intercept/Resend),0.29481887407551133,True,True,False,True,4.557852034586453
+B (Forgery - Intercept/Resend),0.25701024082696217,True,True,False,True,4.509152498325109
+B (Forgery - Intercept/Resend),0.23618623974764233,True,True,False,True,5.062483126451532
+B (Forgery - Intercept/Resend),0.24434856949301795,True,True,False,True,5.202491583986427
+B (Forgery - Intercept/Resend),0.2078994426455167,True,True,False,True,7.002467688609599
+B (Forgery - Intercept/Resend),0.24666006182437442,True,True,False,True,6.742905506233993
+B (Forgery - Intercept/Resend),0.22985775747787043,True,True,False,True,5.292535704724268
+B (Forgery - Intercept/Resend),0.3132988420295377,True,True,False,True,4.130270816893711
+B (Forgery - Intercept/Resend),0.22009400453783468,True,True,False,True,4.45349046466336
+B (Forgery - Intercept/Resend),0.25944976854645213,True,True,False,True,5.693340040061297
+B (Forgery - Intercept/Resend),0.27580733376042854,True,True,False,True,4.742987601606685
+B (Forgery - Intercept/Resend),0.21795498480999395,True,True,False,True,4.564970195524914
+B (Forgery - Intercept/Resend),0.27480445389603514,True,True,False,True,5.465662653171291
+B (Forgery - Intercept/Resend),0.21086122429249993,True,True,False,True,4.964948488311844
+B (Forgery - Intercept/Resend),0.2779633618264426,True,True,False,True,7.126548136950435
+B (Forgery - Intercept/Resend),0.26123373277569556,True,True,False,True,5.3093023127995025
+B (Forgery - Intercept/Resend),0.22519588664028542,True,True,False,True,4.1567571260324945
+B (Forgery - Intercept/Resend),0.2509383171501233,True,True,False,True,5.503197740813529
+B (Forgery - Intercept/Resend),0.2616036838223953,True,True,False,True,4.521791444865864
+B (Forgery - Intercept/Resend),0.2269611554315297,True,True,False,True,4.222218158900087
+B (Forgery - Intercept/Resend),0.22686051211480476,True,True,False,True,5.643409182763993
+B (Forgery - Intercept/Resend),0.2037543778790868,True,True,False,True,4.666721974390507
+B (Forgery - Intercept/Resend),0.2589975666420242,True,True,False,True,6.52201272466494
+B (Forgery - Intercept/Resend),0.25142599350101946,True,True,False,True,6.00128393951411
+B (Forgery - Intercept/Resend),0.24201991856437816,True,True,False,True,4.255596013467909
+B (Forgery - Intercept/Resend),0.2365121392312507,True,True,False,True,6.527335781901832
+B (Forgery - Intercept/Resend),0.2698844228779549,True,True,False,True,5.487397926462616
+B (Forgery - Intercept/Resend),0.31660537727123544,True,True,False,True,4.967658627473851
+B (Forgery - Intercept/Resend),0.262406993020576,True,True,False,True,5.307591552558511
+B (Forgery - Intercept/Resend),0.2455622861975168,True,True,False,True,7.316171347771517
+B (Forgery - Intercept/Resend),0.2801320960607423,True,True,False,True,3.6005203653794453
+B (Forgery - Intercept/Resend),0.24200307355429568,True,True,False,True,5.428336538368288
+B (Forgery - Intercept/Resend),0.26566366430084093,True,True,False,True,3.6515529301866203
+B (Forgery - Intercept/Resend),0.20488876825956392,True,True,False,True,3.093633031238218
+B (Forgery - Intercept/Resend),0.2485777707331756,True,True,False,True,4.896796820960323
+B (Forgery - Intercept/Resend),0.2569043875222903,True,True,False,True,4.230325222120942
+B (Forgery - Intercept/Resend),0.22551524648187876,True,True,False,True,2.9769549424206505
+B (Forgery - Intercept/Resend),0.25658374717494875,True,True,False,True,5.370053958487777
+B (Forgery - Intercept/Resend),0.2698598734071142,True,True,False,True,5.790795687979233
+B (Forgery - Intercept/Resend),0.24618568838126115,True,True,False,True,6.349260962753485
+B (Forgery - Intercept/Resend),0.24727266176946902,True,True,False,True,4.339163613681928
+B (Forgery - Intercept/Resend),0.23958843113392864,True,True,False,True,4.415188355294607
+B (Forgery - Intercept/Resend),0.20668526560999317,True,True,False,True,5.156326052985767
+B (Forgery - Intercept/Resend),0.25499771183524333,True,True,False,True,4.637734189117902
+B (Forgery - Intercept/Resend),0.2357231705982717,True,True,False,True,5.371803824355276
+B (Forgery - Intercept/Resend),0.28433741175095384,True,True,False,True,5.0382551525049815
+B (Forgery - Intercept/Resend),0.23984732785580587,True,True,False,True,4.4085527975770695
+B (Forgery - Intercept/Resend),0.24860487123709676,True,True,False,True,3.7352344289585577
+B (Forgery - Intercept/Resend),0.2474947862360384,True,True,False,True,5.0611822643367805
+B (Forgery - Intercept/Resend),0.2868935737553238,True,True,False,True,5.943473764113375
+B (Forgery - Intercept/Resend),0.2706805847129976,True,True,False,True,4.28705145890076
+B (Forgery - Intercept/Resend),0.26339843086472486,True,True,False,True,3.860617525450083
+B (Forgery - Intercept/Resend),0.2562392139338174,True,True,False,True,5.418737260418859
+B (Forgery - Intercept/Resend),0.23467181167875528,True,True,False,True,6.99937980516149
+B (Forgery - Intercept/Resend),0.2613474732550133,True,True,False,True,3.097271697105491
+B (Forgery - Intercept/Resend),0.26105719773191616,True,True,False,True,4.592588181109992
+B (Forgery - Intercept/Resend),0.250027524316326,True,True,False,True,5.465764790914183
+B (Forgery - Intercept/Resend),0.2578106533462308,True,True,False,True,2.9608486569653847
+B (Forgery - Intercept/Resend),0.22683360512772832,True,True,False,True,5.772624158574592
+B (Forgery - Intercept/Resend),0.2760240849845858,True,True,False,True,6.9031528866625
+B (Forgery - Intercept/Resend),0.2860633647730621,True,True,False,True,2.9444633953695205
+B (Forgery - Intercept/Resend),0.26538964241872903,True,True,False,True,3.0837097988848967
+B (Forgery - Intercept/Resend),0.2822720145708399,True,True,False,True,5.253349402822049
+B (Forgery - Intercept/Resend),0.2271766242404592,True,True,False,True,7.00990094709114
+B (Forgery - Intercept/Resend),0.26287941740581744,True,True,False,True,3.1088511110485273
+B (Forgery - Intercept/Resend),0.2558693623492124,True,True,False,True,4.26886009233462
+B (Forgery - Intercept/Resend),0.2522259095994048,True,True,False,True,4.534805385444637
+B (Forgery - Intercept/Resend),0.27746987772537307,True,True,False,True,3.5767136118164258
+B (Forgery - Intercept/Resend),0.25634810336522834,True,True,False,True,6.814188340599977
+B (Forgery - Intercept/Resend),0.23346079402059458,True,True,False,True,5.210648676058218
+B (Forgery - Intercept/Resend),0.25404003281900156,True,True,False,True,4.310297811121412
+B (Forgery - Intercept/Resend),0.26295787245530505,True,True,False,True,5.097050281809897
+B (Forgery - Intercept/Resend),0.23112464990433754,True,True,False,True,6.762016104898851
+B (Forgery - Intercept/Resend),0.265832299931796,True,True,False,True,4.832893054977468
+B (Forgery - Intercept/Resend),0.23726650465113075,True,True,False,True,4.215637377789474
+B (Forgery - Intercept/Resend),0.274618819451211,True,True,False,True,4.853521765459451
+B (Forgery - Intercept/Resend),0.25918876407729513,True,True,False,True,4.815543299107065
+B (Forgery - Intercept/Resend),0.26232818939634717,True,True,False,True,4.884020869874116
+B (Forgery - Intercept/Resend),0.2652770774495414,True,True,False,True,4.816789090178471
+B (Forgery - Intercept/Resend),0.26659174594237045,True,True,False,True,5.672384109349638
+B (Forgery - Intercept/Resend),0.24766780398677637,True,True,False,True,4.140222759573413
+B (Forgery - Intercept/Resend),0.2311976001891239,True,True,False,True,4.2592631798592295
+B (Forgery - Intercept/Resend),0.2303102471343038,True,True,False,True,5.865796421254052
+B (Forgery - Intercept/Resend),0.24906795374979193,True,True,False,True,6.5701009775725305
+B (Forgery - Intercept/Resend),0.2955865965541028,True,True,False,True,5.024222471072236
+B (Forgery - Intercept/Resend),0.21903965595313254,True,True,False,True,4.618546468459718
+B (Forgery - Intercept/Resend),0.24849303166167114,True,True,False,True,3.511557654847199
+B (Forgery - Intercept/Resend),0.24499013445393897,True,True,False,True,5.286946309141884
+B (Forgery - Intercept/Resend),0.24081144307605248,True,True,False,True,4.231574077087144
+B (Forgery - Intercept/Resend),0.23482486480874382,True,True,False,True,6.786683730359412
+B (Forgery - Intercept/Resend),0.2468070783940462,True,True,False,True,4.170069885316436
+B (Forgery - Intercept/Resend),0.2425420321860975,True,True,False,True,5.95434370804537
+B (Forgery - Intercept/Resend),0.23630623911914886,True,True,False,True,5.481847309331829
+B (Forgery - Intercept/Resend),0.264557698977994,True,True,False,True,5.749117832200975
+B (Forgery - Intercept/Resend),0.277993893423933,True,True,False,True,4.449518020363592
+B (Forgery - Intercept/Resend),0.27265465724363996,True,True,False,True,4.2071464001886305
+B (Forgery - Intercept/Resend),0.24206920246001548,True,True,False,True,6.1960871730603655
+B (Forgery - Intercept/Resend),0.2664475080622235,True,True,False,True,5.002097550598407
+B (Forgery - Intercept/Resend),0.22617172347940245,True,True,False,True,5.561659827093324
+B (Forgery - Intercept/Resend),0.23739254601033538,True,True,False,True,4.076115171790087
+C (Replay Attack),0.01675932872785701,False,False,True,True,5.246494039900443
+C (Replay Attack),0.009394839472842446,False,False,True,True,5.360763153211989
+C (Replay Attack),0.020869548098549715,False,False,True,True,4.415473597562994
+C (Replay Attack),0.025184636467251782,False,False,True,True,5.611440423692757
+C (Replay Attack),0.016968579272674242,False,False,True,True,4.329983378229076
+C (Replay Attack),0.023475757377309642,False,False,True,True,3.483926440583926
+C (Replay Attack),0.018336887851229444,False,False,True,True,4.368953472525324
+C (Replay Attack),0.02034938742326981,False,False,True,True,5.211126522390765
+C (Replay Attack),0.020183939574821404,False,False,True,True,6.134848076219415
+C (Replay Attack),0.021140315173160038,False,False,True,True,4.685007748782782
+C (Replay Attack),0.013945725462212094,False,False,True,True,5.721849796857731
+C (Replay Attack),0.022640732729258442,False,False,True,True,6.450809544896753
+C (Replay Attack),0.016262725832740958,False,False,True,True,5.026418040085686
+C (Replay Attack),0.01970653651203031,False,False,True,True,4.9123891407504345
+C (Replay Attack),0.02005195105663557,False,False,True,True,3.285460509718537
+C (Replay Attack),0.02412492767012826,False,False,True,True,5.653205871331967
+C (Replay Attack),0.02565236700429408,False,False,True,True,7.24957436649435
+C (Replay Attack),0.01840516403182116,False,False,True,True,4.963856823568689
+C (Replay Attack),0.0200489178256167,False,False,True,True,6.942185450708457
+C (Replay Attack),0.01134390138632534,False,False,True,True,5.485767970207398
+C (Replay Attack),0.012645843162757808,False,False,True,True,2.4184292178768128
+C (Replay Attack),0.009895836042560313,False,False,True,True,3.6182314442916272
+C (Replay Attack),0.025345127197103506,False,False,True,True,4.131639587034231
+C (Replay Attack),0.018862711703592907,False,False,True,True,3.836487239820106
+C (Replay Attack),0.023054752391123725,False,False,True,True,3.8980384754991864
+C (Replay Attack),0.026588260880025825,False,False,True,True,4.006894585732718
+C (Replay Attack),0.016175862810106877,False,False,True,True,5.122741045402432
+C (Replay Attack),0.020123556104139316,False,False,True,True,6.424690088752885
+C (Replay Attack),0.020602036440465852,False,False,True,True,3.792165711639125
+C (Replay Attack),0.017198323629518425,False,False,True,True,4.427216056632166
+C (Replay Attack),0.023625211105656206,False,False,True,True,5.38379300881221
+C (Replay Attack),0.019403044884939314,False,False,True,True,5.8696072200033855
+C (Replay Attack),0.017357517914108656,False,False,True,True,4.8637662516879
+C (Replay Attack),0.020903802021666435,False,False,True,True,6.528181282764779
+C (Replay Attack),0.01950733409838204,False,False,True,True,4.649201091185265
+C (Replay Attack),0.014770814811438543,False,False,True,True,5.686052183316461
+C (Replay Attack),0.0170617731287648,False,False,True,True,5.3436850178679
+C (Replay Attack),0.01049195054805144,False,False,True,True,6.043186958815012
+C (Replay Attack),0.013340311160056982,False,False,True,True,4.222657636424584
+C (Replay Attack),0.0252929056742632,False,False,True,True,3.665529264025614
+C (Replay Attack),0.019602724823133827,False,False,True,True,5.07425608108049
+C (Replay Attack),0.015007215933335784,False,False,True,True,6.342933001549973
+C (Replay Attack),0.027493891511622088,False,False,True,True,3.0283824964050483
+C (Replay Attack),0.012755048513007475,False,False,True,True,5.808232202493007
+C (Replay Attack),0.013484879323163428,False,False,True,True,4.611362646432978
+C (Replay Attack),0.020647760441669164,False,False,True,True,5.69185008231336
+C (Replay Attack),0.01888373702794345,False,False,True,True,5.095220919802038
+C (Replay Attack),0.0161163354132476,False,False,True,True,6.292361598433893
+C (Replay Attack),0.017523430715491083,False,False,True,True,5.3397328875760035
+C (Replay Attack),0.01744180956708383,False,False,True,True,5.106323490734434
+C (Replay Attack),0.019159184478000173,False,False,True,True,4.837535828434897
+C (Replay Attack),0.014931095708947517,False,False,True,True,5.796412794238036
+C (Replay Attack),0.027070212083691307,False,False,True,True,5.243148097779433
+C (Replay Attack),0.023661676368738577,False,False,True,True,5.8380678807185795
+C (Replay Attack),0.024639928904953395,False,False,True,True,5.303356751359116
+C (Replay Attack),0.021061286399912,False,False,True,True,5.86400727202079
+C (Replay Attack),0.020344161628013915,False,False,True,True,4.026081606235047
+C (Replay Attack),0.02011924177227966,False,False,True,True,3.111584608460558
+C (Replay Attack),0.019970498806224524,False,False,True,True,5.413372336297499
+C (Replay Attack),0.026179903881569763,False,False,True,True,5.151277277397092
+C (Replay Attack),0.02464069910590775,False,False,True,True,4.999462485808592
+C (Replay Attack),0.01488261826976595,False,False,True,True,3.588620282280706
+C (Replay Attack),0.015151328109313604,False,False,True,True,3.633852281353196
+C (Replay Attack),0.023168539052596294,False,False,True,True,4.792385314301702
+C (Replay Attack),0.02285157445007658,False,False,True,True,5.0734314298314835
+C (Replay Attack),0.025220247723610673,False,False,True,True,6.060192790888837
+C (Replay Attack),0.01677330996111424,False,False,True,True,4.725684039054899
+C (Replay Attack),0.017335857066126913,False,False,True,True,3.378687924259059
+C (Replay Attack),0.023376085727004357,False,False,True,True,6.188794788193607
+C (Replay Attack),0.019967858043629015,False,False,True,True,4.506807781550998
+C (Replay Attack),0.02545452514444778,False,False,True,True,2.655037710984509
+C (Replay Attack),0.020887375979676874,False,False,True,True,5.143283974100292
+C (Replay Attack),0.017145714727372637,False,False,True,True,6.3915745307593745
+C (Replay Attack),0.024853677095272468,False,False,True,True,4.738842752302043
+C (Replay Attack),0.019566520049740826,False,False,True,True,4.611976036451294
+C (Replay Attack),0.017439400456728493,False,False,True,True,3.691800073136135
+C (Replay Attack),0.02689974226848193,False,False,True,True,6.028000150290703
+C (Replay Attack),0.02399083165569727,False,False,True,True,3.9056640802239233
+C (Replay Attack),0.030404225823166667,False,False,True,True,6.9801652655572655
+C (Replay Attack),0.02094028584500643,False,False,True,True,4.095779347860024
+C (Replay Attack),0.01566784958227916,False,False,True,True,5.4185486310884885
+C (Replay Attack),0.015434929298612138,False,False,True,True,4.965789115743278
+C (Replay Attack),0.025443223548933816,False,False,True,True,3.4931762563168665
+C (Replay Attack),0.030028643477978616,False,False,True,True,6.566708408996247
+C (Replay Attack),0.013814570751812704,False,False,True,True,3.586358705752959
+C (Replay Attack),0.018582890732202675,False,False,True,True,3.9688567996996342
+C (Replay Attack),0.01868139586544739,False,False,True,True,2.418814034591579
+C (Replay Attack),0.0188564897239901,False,False,True,True,6.802856471578817
+C (Replay Attack),0.014417026496311856,False,False,True,True,4.726931163170611
+C (Replay Attack),0.012551953995295604,False,False,True,True,5.638237525241971
+C (Replay Attack),0.018873404053764226,False,False,True,True,6.940733059659233
+C (Replay Attack),0.021034197217197,False,False,True,True,4.627820031761331
+C (Replay Attack),0.02275136247877892,False,False,True,True,4.493772040811905
+C (Replay Attack),0.013303459110903741,False,False,True,True,5.301947769788607
+C (Replay Attack),0.019125656008957482,False,False,True,True,5.166315050338862
+C (Replay Attack),0.021877286662800324,False,False,True,True,4.489680328405544
+C (Replay Attack),0.022107881862462268,False,False,True,True,6.737696573143212
+C (Replay Attack),0.014461002351374172,False,False,True,True,6.737425507234114
+C (Replay Attack),0.01878598374505193,False,False,True,True,4.23337335415065
+C (Replay Attack),0.032136102855758956,False,False,True,True,5.155021633125248
+D (Channel Decoherence),0.17055604506886776,True,True,False,True,5.817594240917867
+D (Channel Decoherence),0.12479107762440411,True,True,False,True,5.120819598652519
+D (Channel Decoherence),0.14212020360494004,True,True,False,True,3.658207405004096
+D (Channel Decoherence),0.12342432950520339,True,True,False,True,5.1022902437238855
+D (Channel Decoherence),0.15885379516198606,True,True,False,True,5.390668185236196
+D (Channel Decoherence),0.14541257167258267,True,True,False,True,4.201483020391834
+D (Channel Decoherence),0.1351970822757439,True,True,False,True,4.44483940554055
+D (Channel Decoherence),0.134504171953189,True,True,False,True,4.796725348700131
+D (Channel Decoherence),0.14965669374046894,True,True,False,True,4.104011835056039
+D (Channel Decoherence),0.1465192479835498,True,True,False,True,4.239679961511599
+D (Channel Decoherence),0.14993291392121924,True,True,False,True,5.50708770795473
+D (Channel Decoherence),0.1526718785092314,True,True,False,True,5.472150874491025
+D (Channel Decoherence),0.1252197813358819,True,True,False,True,4.621303501421496
+D (Channel Decoherence),0.15415109065096186,True,True,False,True,5.641162459591333
+D (Channel Decoherence),0.12602994955889837,True,True,False,True,5.1591782538180055
+D (Channel Decoherence),0.16809630972797446,True,True,False,True,4.821389304187818
+D (Channel Decoherence),0.14857862832784896,True,True,False,True,5.450456882026013
+D (Channel Decoherence),0.15370677275936181,True,True,False,True,5.674637350258546
+D (Channel Decoherence),0.15108620796127362,True,True,False,True,5.15249607035272
+D (Channel Decoherence),0.1382633334428845,True,True,False,True,4.829562138637899
+D (Channel Decoherence),0.16879683055902978,True,True,False,True,4.795830244340697
+D (Channel Decoherence),0.14747153580778055,True,True,False,True,4.508496628080489
+D (Channel Decoherence),0.16180778823661074,True,True,False,True,4.145320922337218
+D (Channel Decoherence),0.16365753292578075,True,True,False,True,4.063026605739535
+D (Channel Decoherence),0.13413328312285067,True,True,False,True,5.2059394620941095
+D (Channel Decoherence),0.15195269204402714,True,True,False,True,5.297557303013907
+D (Channel Decoherence),0.16593805681334098,True,True,False,True,4.587504034799687
+D (Channel Decoherence),0.1566449038934092,True,True,False,True,4.090182734650808
+D (Channel Decoherence),0.16888753544548316,True,True,False,True,5.632458666420014
+D (Channel Decoherence),0.15804778148029855,True,True,False,True,5.187878491309786
+D (Channel Decoherence),0.13821600833791403,True,True,False,True,4.672628438332611
+D (Channel Decoherence),0.15752669192737523,True,True,False,True,4.980815880463856
+D (Channel Decoherence),0.15185616993707388,True,True,False,True,3.640180493198292
+D (Channel Decoherence),0.1527164096981437,True,True,False,True,4.3080726098590985
+D (Channel Decoherence),0.1337499516937159,True,True,False,True,4.845314610480452
+D (Channel Decoherence),0.12215243621081072,True,True,False,True,5.698569990406096
+D (Channel Decoherence),0.16278019346536868,True,True,False,True,4.9465639007532864
+D (Channel Decoherence),0.13509326738172145,True,True,False,True,4.0546311795860985
+D (Channel Decoherence),0.14773315419797645,True,True,False,True,2.5762662688304476
+D (Channel Decoherence),0.15270715174611535,True,True,False,True,5.664432023980076
+D (Channel Decoherence),0.14532157727226205,True,True,False,True,4.505597630590402
+D (Channel Decoherence),0.1527295088785299,True,True,False,True,5.3506440670398945
+D (Channel Decoherence),0.1664122762779885,True,True,False,True,5.018396679213148
+D (Channel Decoherence),0.1396536352269923,True,True,False,True,4.53873495402765
+D (Channel Decoherence),0.15272918612790126,True,True,False,True,6.55620037499693
+D (Channel Decoherence),0.14519590042818456,True,True,False,True,3.9474733405986697
+D (Channel Decoherence),0.13694840069800948,True,True,False,True,2.903665393776846
+D (Channel Decoherence),0.15494690996521562,True,True,False,True,3.638675710717802
+D (Channel Decoherence),0.1314973570858113,True,True,False,True,3.0239853858452967
+D (Channel Decoherence),0.1332301743062546,True,True,False,True,5.568414476937818
+D (Channel Decoherence),0.13032968825062133,True,True,False,True,3.25035766326397
+D (Channel Decoherence),0.152673947009548,True,True,False,True,4.658828711063987
+D (Channel Decoherence),0.1564828502028042,True,True,False,True,5.7405598049078375
+D (Channel Decoherence),0.14987251604200327,True,True,False,True,3.702239173618172
+D (Channel Decoherence),0.14814300058159402,True,True,False,True,5.500259480149979
+D (Channel Decoherence),0.141255165644082,True,True,False,True,3.5625387522871055
+D (Channel Decoherence),0.16653918091313227,True,True,False,True,4.5847523568155
+D (Channel Decoherence),0.1438615498137783,True,True,False,True,5.0159622417312
+D (Channel Decoherence),0.16545708536263876,True,True,False,True,5.2636197519566235
+D (Channel Decoherence),0.14500161020464422,True,True,False,True,5.682133345265744
+D (Channel Decoherence),0.1822053673921134,True,True,False,True,6.387786258105511
+D (Channel Decoherence),0.16009307131016978,True,True,False,True,3.877719520142936
+D (Channel Decoherence),0.20628088114597995,True,True,False,True,3.801342881328079
+D (Channel Decoherence),0.1444229564472132,True,True,False,True,4.300110805771429
+D (Channel Decoherence),0.17440337792284588,True,True,False,True,5.420240075475803
+D (Channel Decoherence),0.1285931255571962,True,True,False,True,5.267587177261225
+D (Channel Decoherence),0.15820358501773407,True,True,False,True,4.681516976441286
+D (Channel Decoherence),0.131697153160282,True,True,False,True,4.274966582038485
+D (Channel Decoherence),0.14344726471313396,True,True,False,True,5.022731528940041
+D (Channel Decoherence),0.14220135075454887,True,True,False,True,5.73522040424445
+D (Channel Decoherence),0.13575078752920733,True,True,False,True,3.2686131314908597
+D (Channel Decoherence),0.1389090983419614,True,True,False,True,6.3488906463814505
+D (Channel Decoherence),0.1414026553927397,True,True,False,True,7.340808887791223
+D (Channel Decoherence),0.1573722635157729,True,True,False,True,3.835573935755674
+D (Channel Decoherence),0.1374857070482526,True,True,False,True,5.243372471393814
+D (Channel Decoherence),0.1323353411657283,True,True,False,True,7.3745786530316
+D (Channel Decoherence),0.1351366382866017,True,True,False,True,5.680943455950683
+D (Channel Decoherence),0.17190194835390213,True,True,False,True,4.890799592995327
+D (Channel Decoherence),0.13506208311927737,True,True,False,True,4.726933657725383
+D (Channel Decoherence),0.1554332459620111,True,True,False,True,5.875752092861522
+D (Channel Decoherence),0.15085075403994375,True,True,False,True,3.5997775740191456
+D (Channel Decoherence),0.15063485859914558,True,True,False,True,4.326641828447504
+D (Channel Decoherence),0.11725146243861886,True,True,False,True,4.302439811836219
+D (Channel Decoherence),0.12851323987818114,True,True,False,True,5.586854407268513
+D (Channel Decoherence),0.17916247131061616,True,True,False,True,6.858753656760396
+D (Channel Decoherence),0.1414018688332681,True,True,False,True,4.532605629776729
+D (Channel Decoherence),0.16033172998985754,True,True,False,True,6.061285612072863
+D (Channel Decoherence),0.1437189212016047,True,True,False,True,4.857364061728424
+D (Channel Decoherence),0.18310394023729337,True,True,False,True,4.89254848111278
+D (Channel Decoherence),0.1427201783656328,True,True,False,True,5.119913983874956
+D (Channel Decoherence),0.15869553543194784,True,True,False,True,3.9783581427814187
+D (Channel Decoherence),0.14627395791494666,True,True,False,True,3.833639381281513
+D (Channel Decoherence),0.14582604669749138,True,True,False,True,6.876924528780102
+D (Channel Decoherence),0.16112583268001834,True,True,False,True,4.907456749281341
+D (Channel Decoherence),0.13600331961620443,True,True,False,True,4.688592040520837
+D (Channel Decoherence),0.1657609999161781,True,True,False,True,4.438313189699331
+D (Channel Decoherence),0.17175630986280194,True,True,False,True,3.6263636447381686
+D (Channel Decoherence),0.1456493056007219,True,True,False,True,6.742764333284221
+D (Channel Decoherence),0.1198824184641948,True,True,False,True,6.18841315734982
+D (Channel Decoherence),0.12222934388039353,True,True,False,True,4.90992015293401
